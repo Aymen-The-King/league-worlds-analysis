@@ -44,7 +44,7 @@ def remove_scenario_repeat(df,matchings):
     return L_reduced
 
 
-def calculate_round5_probabilities(upper_bracket_matchings,lower_bracket_matchings):
+def calculate_round5_probabilities(upper_bracket_matchings,lower_bracket_matchings,region_list):
 
     total_scenarios = 0
 
@@ -124,3 +124,4 @@ def calculate_round5_probabilities(upper_bracket_matchings,lower_bracket_matchin
         prob = (freq / total).reset_index()
         prob.columns = ['Teams_Advancing', 'Probability']
         probabilities[region] = prob
+    return probabilities

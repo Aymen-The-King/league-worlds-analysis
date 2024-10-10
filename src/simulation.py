@@ -2,11 +2,12 @@ import pandas as pd
 from itertools import combinations
 from ranking import calculate_ranking
 from utils import check_repeat_matchup
-EU=["G2 Esports","Fnatic","MAD Lions"]
-NA=["Team Liquid","FlyQuest"]
-KR=["Gen.G","T1","Dplus KIA","Hanwha Life Esports"]
-CN=["Weibo Gaming","Top Esports","BLG","LNG Esports"]
-TW=["PSG Talon"]
+
+
+
+
+
+
 def simulate_round_all(df, round_num):
     previous_rounds_df = df[df["Round"] < f"Round {round_num}"]
     ranking_df = calculate_ranking(df, round_num - 1)
